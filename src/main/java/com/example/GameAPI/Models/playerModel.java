@@ -12,7 +12,7 @@ import javax.persistence.GenerationType;
 
 public class playerModel {
     @Id
- @GeneratedValue(strategy = GenerationType.AUTO)
+ @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
     public String name;
     public int age ;
