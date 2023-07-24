@@ -23,19 +23,16 @@ public class playerService {
     }
 
 
-    public Optional<playerModel> updatePlayer(Long id, playerModel updatedPlayers) {
-        Optional<playerModel> optionalPlayer = PlayerRepositry.findById(id);
+    public playerModel updatePlayer(Long id, playerModel updatedPlayers) {
 
-        if (optionalPlayer.isPresent()) {
-            playerModel player = optionalPlayer.get();
+            playerModel player = new playerModel();
             player.id=updatedPlayers.id;
             player.name=updatedPlayers.name;
             player.age=updatedPlayers.age;
             player.nationality=updatedPlayers.nationality;
             PlayerRepositry.save(player);
-            return Optional.of(PlayerRepositry.findById(id).get());
-        }
-        return null;
+        return PlayerRepositry.findById(id).get();
+
     }
 
 }

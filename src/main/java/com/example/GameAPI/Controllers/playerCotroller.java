@@ -25,13 +25,9 @@ public class playerCotroller {
     }
 
     @PutMapping("/{Id}")
-    public ResponseEntity<Optional<playerModel>> updateProduct(@PathVariable Long Id, @RequestBody playerModel updatedProduct) {
-        Optional<playerModel> response = PlayerService.updatePlayer(Id, updatedProduct);
-        if (response != null) {
-            return ResponseEntity.ok(response);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    public void UpdatedPlayer(@PathVariable Long Id, @RequestBody playerModel updatedPlayer) {
+        PlayerService.updatePlayer(Id, updatedPlayer);
+
     }
 
 }
