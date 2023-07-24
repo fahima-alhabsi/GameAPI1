@@ -1,84 +1,171 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>
-    gameAPI
-</title>
-<link rel="stylesheet" href="index.css">
+    <title>
+        gameAPI
+    </title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-<nav style="border:1px solid black">
-    <h1>
-        chess game
-    </h1>
+    <nav style="border:1px solid black">
+        <h1>
+            chess game
+        </h1>
 
-    
-</nav>
-<div class="listOfPlayers">
-    <h1>list of players</h1>
-    <div class="row">
-        <div class="column">
-          <div class="card">
-            <ul>
-                <li>id :11s </li>
-                <li>name :sadik</li>
-                <li>nastionality :omani</li>
-                <li>aggee :22</li>
-              </ul>
 
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <ul>
-                <li>Ccoffee</li>
+    </nav>
+    <div class="listOfPlayers">
+        <h1>list of players</h1>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <ul>
+                        <li>id :11s </li>
+                        <li>name :sadik</li>
+                        <li>nastionality :omani</li>
+                        <li>aggee :22</li>
+                    </ul>
 
-                <li>Tea</li>
-                <li>Milk</li>
-              </ul>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <ul>
-            <li>sami </li>
-            <li>abdulaziz</li>
-            <li>said</li>
-          </ul>
-        </div>
-        </div>
-        <div class="column">
-          <div class="card"><ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-          </ul></div>
-        </div>
-        <div class="column">
-            <div class="card"><ul>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
-              </ul></div>
-          </div>
-      </div>
-</div>
-<div class="addPlayer">
-<h1>add new player</h1>
-</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <ul>
+                        <li>Ccoffee</li>
 
-<div class="updatePlayer">
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <ul>
+                        <li>sami </li>
+                        <li>sadik</li>
+                        <li>said</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="addPlayer">
+        <h1>add new player</h1>
 
-    <h1>
-        update player information
-    </h1>
+        <form>
+
+
+            <div class="input_wrap" 
+   
+>
+                <label for="name">Name        </label>
+                <input type="text" id="name" value="">
+
+            </div>
+
+            <div class="input_wrap" 
+            >
+                <label for="nationality">nationality </label>
+                <input type="text" id="nationality" value="">
+
+            </div>
+            <div class="input_wrap" 
+                        >
+                <label for="age">age         </label>
+                <input type="text" id="age" value="">
+
+            </div>
+
+
+
+
+
+            <input onclick="createPlayer()" type="submit" value="add player" class="submit_btn">
+
+        </form>
+    </div>
+
+    <div class="updatePlayer">
+
+        <h1>
+            update player information
+        </h1>
+
+        
+        <form>
+
+            <div class="input_wrap" 
+   
+            >
+                            <label for="uid">id        </label>
+                            <input type="text" id="uid" value="">
+            
+                        </div>
+            <div class="input_wrap" 
+   
+>
+                <label for="uname">Name        </label>
+                <input type="text" id="uname" value="">
+
+            </div>
+
+            <div class="input_wrap" 
+            >
+                <label for="unationality">nationality </label>
+                <input type="text" id="unationality" value="">
+
+            </div>
+            <div class="input_wrap" 
+                        >
+                <label for="uage">age         </label>
+                <input type="text" id="uage" value="">
+
+            </div>
+
+
+
+
+
+            <input onclick="updatePlayer()" type="submit" value="update player" class="submit_btn">
+
+        </form>
     </div>
     <div class="deletePlayer">
 
         <h1>
-           delete a player 
+            delete a player
         </h1>
-        </div>
+        <div class="input_wrap" 
+   
+        >
+                        <label for="dltid">enter id you want to delete</label>
+                        <input type="text" id="dltid" value="">
+        
+                    </div>
+
+                    <input onclick="deletePlayer()" type="submit" value="delete player" class="submit_btn">
+    </div>
+    
     <script type="text/javascript" src="index.js"></script>
 </body>
 

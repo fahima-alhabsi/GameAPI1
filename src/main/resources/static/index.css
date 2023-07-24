@@ -5,7 +5,7 @@ width:100%;
 }
 
 .addPlayer{
-    background-image: url(./pics/addnewplayerbc.png);
+  background-color:chartreuse;
     border:1px solid black;
     width:100%;
    
