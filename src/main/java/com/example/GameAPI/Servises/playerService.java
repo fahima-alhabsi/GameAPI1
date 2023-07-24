@@ -34,5 +34,11 @@ public class playerService {
         return PlayerRepositry.findById(id).get();
 
     }
-
+    public void deletePlayer(Long Id) {
+        Optional<playerModel> optionalPlayer= PlayerRepositry.findById(Id);
+        if (optionalPlayer.isPresent()) {
+            playerModel todo = optionalPlayer.get();
+            PlayerRepositry.delete(todo);
+        }
+    }
 }

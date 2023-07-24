@@ -29,5 +29,11 @@ public class playerCotroller {
         PlayerService.updatePlayer(Id, updatedPlayer);
 
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deletePlayer(@PathVariable Long id) {
 
+        PlayerService.deletePlayer(id);
+            return ResponseEntity.noContent().build();
+
+    }
 }
